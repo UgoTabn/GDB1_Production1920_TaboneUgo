@@ -27,6 +27,8 @@ let dialogue;
 let style;
 let barreDeVie;
 let modeEntrainement;
+let boulon;
+let boulonun;
 
 function touche(route, voiture){
 	miniJeu_Mort = 1;
