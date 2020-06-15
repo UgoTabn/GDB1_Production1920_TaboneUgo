@@ -13,14 +13,13 @@ preload(){
 create(){
 	//drag and drop de la voiture
 	let roue = this.physics.add.sprite(100, 100, 'roue').setInteractive();
+	boulon = 0;
 	this.input.setDraggable(roue);
-	
 	this.input.dragDistanceThreshold = 16;
-	this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
-		gameObject.x = dragX;
-        gameObject.y = dragY;
-	});
+
 	
+	boulonun = this.button = this.add.sprite(10, 10, 'boulon').setInteractive();
+	boulonun.on('pointerdown', function(){boulon = 1;}, this) //bouton pour aller dans le menu "Menu"
 
 
 
@@ -30,8 +29,16 @@ create(){
 	
 update(){
  	
-
-
+	if(boulon === 1){
+	this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
+		gameObject.x = dragX;
+        gameObject.y = dragY;
+	});
+	}
+	
+	if(boulon === 1){
+		boulonun.destroy();
+	}
 
 }
 }
