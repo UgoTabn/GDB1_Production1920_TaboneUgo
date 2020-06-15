@@ -29,7 +29,7 @@ create(){
 		this.add.image(0,0, 'defaite').setOrigin(0);
 	}
 	
-	
+	boulon = 0;
 	miniJeu_Mort = 0;
 	miniJeu_Reussi = 0;
 	majHP();
