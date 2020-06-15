@@ -38,7 +38,22 @@ function touche(route, voiture){
 function finNiveau(arrivee, voiture){
 	score +=1;
 	miniJeu_Reussi = 1;
+	if(modeEntrainement===1){
 	this.scene.start("MiniJeuUnUniquement");
+	}
+	else if(modeEntrainement===0){
+	this.scene.start("PartieNormale");
+	}
+};
+function finNiveauDeux(arrivee, roue){
+	score +=1;
+	miniJeu_Reussi = 1;
+	if(modeEntrainement===1){
+	this.scene.start("MiniJeuDeuxUniquement");
+	}
+	else if(modeEntrainement===0){
+	this.scene.start("PartieNormale");
+	}
 };
 
 function chrono(){
@@ -46,12 +61,24 @@ function chrono(){
 	pointDeVie -=1;
 };
 function enchainementDeScene(){
+	if(modeEntrainement===1){
 	if(pointDeVie>0){this.scene.start("MiniJeuUnGame");}
 	else if(pointDeVie===0){this.scene.start("Menu");miniJeu_RecordUn = score;}
+	}
+	else if(modeEntrainement===0){
+	if(pointDeVie>0){this.scene.start("PartieNormale");}
+	else if(pointDeVie===0){this.scene.start("Menu");miniJeu_RecordUn = score;}
+	}
 };
 function enchainementDeSceneDeux(){
+	if(modeEntrainement===1){
 	if(pointDeVie>0){this.scene.start("MiniJeuDeuxGame");}
 	else if(pointDeVie===0){this.scene.start("Menu");miniJeu_RecordUn = score;}
+	}
+	else if(modeEntrainement===0){
+	if(pointDeVie>0){this.scene.start("PartieNormale");}
+	else if(pointDeVie===0){this.scene.start("Menu");miniJeu_RecordUn = score;}
+	}
 };
 function majHP(){
 			if(pointDeVie===3){
