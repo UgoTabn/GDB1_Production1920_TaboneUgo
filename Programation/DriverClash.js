@@ -47,6 +47,10 @@ function enchainementDeScene(){
 	if(pointDeVie>0){this.scene.start("MiniJeuUnGame");}
 	else if(pointDeVie===0){this.scene.start("Menu");miniJeu_RecordUn = score;}
 };
+function enchainementDeSceneDeux(){
+	if(pointDeVie>0){this.scene.start("MiniJeuDeuxGame");}
+	else if(pointDeVie===0){this.scene.start("Menu");miniJeu_RecordUn = score;}
+};
 function majHP(){
 			if(pointDeVie===3){
 	   barreDeVie.anims.play('unpv',true);
@@ -55,7 +59,7 @@ function majHP(){
 	   barreDeVie.anims.play('depv',true);
 	   }
 	 		if(pointDeVie===1){
-	   barreDeVie.anims.play('1trpv',true);
+	   barreDeVie.anims.play('trpv',true);
 	   }
 };
 
