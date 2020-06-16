@@ -13,6 +13,8 @@ create(){
 	this.button.on('pointerdown', function(){this.scene.start("Menu");}, this) //bouton pour aller dans le menu "Menu"
 	
 	//Affichage des records avec les variables
+	style = { font: "bold 17px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" };
+	
 }
 	
 update(){
