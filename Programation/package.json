@@ -1,0 +1,13 @@
+{
+    "app_name": "DriverClash",
+    "main": "DriverClash.html",
+    "name": "driverclash",
+    "nodejs": true,
+    "webkit": {
+        "double_tap_to_zoom_enabled": false
+    },
+    "window": {
+        "id": "Programation",
+        "title": "Programation"
+    }
+}
