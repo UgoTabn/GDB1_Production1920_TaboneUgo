@@ -5,12 +5,20 @@ class EcranTitre extends Phaser.Scene {
 
 	
 preload(){
-	//this.load.image('logo', 'assets/logo.png'); //Background de l'ecran titre
+	this.load.image('EcranTitre', 'assets/EcranTitre.png'); //Background de l'ecran titre
 }
 
 create(){
-this.button = this.add.sprite(10, 10, 'start').setInteractive();
-this.button.on('pointerdown', function(){this.scene.start("Menu");}, this)
+this.add.image(0,0, 'EcranTitre').setOrigin(0);
+miniJeu_RecordUn=0;
+miniJeu_RecordDeux=0;
+miniJeu_RecordTrois=0;
+jeu_Record=0;
+
+this.time.addEvent({ delay: 0, callback:function(){this.scene.start("Menu");}, callbackScope: this, loop: false });	
+
+	
+	
 }
 	
 update(){
