@@ -34,6 +34,7 @@ let boulonun;
 let nombreHabitRestant;
 let random;
 let temps;
+let tuto;
 
 
 function touche(route, voiture){
