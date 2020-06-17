@@ -16,7 +16,7 @@ miniJeu_RecordTrois=0;
 jeu_Record=0;
 	tuto= 0;
 
-this.time.addEvent({ delay: 0, callback:function(){this.scene.start("Menu");}, callbackScope: this, loop: false });	
+this.time.addEvent({ delay: 1250, callback:function(){this.scene.start("Menu");}, callbackScope: this, loop: false });	
 
 	
 	
