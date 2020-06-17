@@ -10,6 +10,7 @@ preload(){
 	this.load.image('boutonclan', 'assets/boutonclan.png'); //Background du menu avec les boutons
 	this.load.image('option', 'assets/boutonoption.png'); //Background du menu avec les boutons
 	this.load.image('record', 'assets/boutonrecord.png'); //Background du menu avec les boutons
+	this.load.image('tuto', 'assets/ecrantuto.png'); //Background du menu avec les boutons
 }
 
 create(){
@@ -17,6 +18,14 @@ create(){
 	
 	
 	this.add.image(0,0, 'background').setOrigin(0);
+
+
+
+	
+	
+	
+	
+	
 	//reset des valeurs
 	pointDeVie = 4;
 	miniJeu_Mort = 0;
@@ -27,7 +36,7 @@ create(){
 	//boutons qui servent à se ballader dans les différents menus, chaque menu etant une scene
 	this.button = this.add.sprite(187.5, 201.75, 'boutonplay').setInteractive();
 	this.button.on('pointerdown', function(){this.scene.start("MenuJouer");}, this) //bouton pour aller dans le menu "Jouer"
-	1
+	
 	this.button = this.add.sprite(187.5, 441.25, 'boutonclan').setInteractive();
 	this.button.on('pointerdown', function(){this.scene.start("MenuClan");}, this) //bouton pour aller dans le menu "Clan"
 	
@@ -37,7 +46,14 @@ create(){
 	this.button = this.add.sprite(55.5, 464.3, 'record').setInteractive();
 	this.button.on('pointerdown', function(){this.scene.start("MenuRecord");}, this) //bouton pour aller dans le menu "Record"
 
-	//this.add.image(0,0, 'Menu').setOrigin(0);
+
+	
+		if(tuto === 0){
+this.button = this.add.sprite(0, 0, 'tuto').setInteractive().setOrigin(0);
+this.button.on('pointerdown', function(){tuto = 1;this.scene.start("Menu");}, this)
+}
+
+	
 }
 	
 update(){
