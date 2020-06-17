@@ -5,10 +5,27 @@ class Menu extends Phaser.Scene {
 
 	
 preload(){
-	//this.load.image('logo', 'assets/logo.png'); //Background du menu avec les boutons
+	this.load.image('background', 'assets/background.png'); //Background du menu avec les boutons
+	this.load.image('boutonplay', 'assets/boutonplay.png'); //Background du menu avec les boutons
+	this.load.image('boutonclan', 'assets/boutonclan.png'); //Background du menu avec les boutons
+	this.load.image('option', 'assets/boutonoption.png'); //Background du menu avec les boutons
+	this.load.image('record', 'assets/boutonrecord.png'); //Background du menu avec les boutons
+	this.load.image('tuto', 'assets/ecrantuto.png'); //Background du menu avec les boutons
 }
 
 create(){
+
+	
+	
+	this.add.image(0,0, 'background').setOrigin(0);
+
+
+
+	
+	
+	
+	
+	
 	//reset des valeurs
 	pointDeVie = 4;
 	miniJeu_Mort = 0;
@@ -17,17 +34,26 @@ create(){
 	modeEntrainement = 0;
 
 	//boutons qui servent à se ballader dans les différents menus, chaque menu etant une scene
-	this.button = this.add.sprite(10, 10, 'jouer').setInteractive();
+	this.button = this.add.sprite(187.5, 201.75, 'boutonplay').setInteractive();
 	this.button.on('pointerdown', function(){this.scene.start("MenuJouer");}, this) //bouton pour aller dans le menu "Jouer"
 	
-	this.button = this.add.sprite(50, 10, 'clan').setInteractive();
+	this.button = this.add.sprite(187.5, 441.25, 'boutonclan').setInteractive();
 	this.button.on('pointerdown', function(){this.scene.start("MenuClan");}, this) //bouton pour aller dans le menu "Clan"
 	
-	this.button = this.add.sprite(100, 10, 'option').setInteractive();
+	this.button = this.add.sprite(55.5, 545.5, 'option').setInteractive();
 	this.button.on('pointerdown', function(){this.scene.start("MenuOption");}, this) //bouton pour aller dans le menu "Option"
 
-	this.button = this.add.sprite(150, 10, 'record').setInteractive();
+	this.button = this.add.sprite(55.5, 464.3, 'record').setInteractive();
 	this.button.on('pointerdown', function(){this.scene.start("MenuRecord");}, this) //bouton pour aller dans le menu "Record"
+
+
+	
+		if(tuto === 0){
+this.button = this.add.sprite(0, 0, 'tuto').setInteractive().setOrigin(0);
+this.button.on('pointerdown', function(){tuto = 1;this.scene.start("Menu");}, this)
+}
+
+	
 }
 	
 update(){
