@@ -1,6 +1,6 @@
 La version finale du jeu est disponible via le chemin suivant : 
 - "Programation\DriverClash.html" (il faudra mangoose ou autre logiciel équivalant pour tester).
 - "Programation\DriverClash-Executable\DriverClash.exe" (avec cette version, il faut juste lancer le .exe).
-- Le jeu est également sur itch.io a ce lien : "
+- Le jeu est également sur itch.io a ce lien : "https://yugow.itch.io/driverclash"
 
 Le jeu fonctionnais bien sur mobile mais j'ai eu des problemes pour l'export .apk (android).
